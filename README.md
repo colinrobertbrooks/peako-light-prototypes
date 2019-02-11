@@ -1,4 +1,4 @@
-## Peako Light Prototype
+# Peako Light Prototype
 
 ## Development
 
