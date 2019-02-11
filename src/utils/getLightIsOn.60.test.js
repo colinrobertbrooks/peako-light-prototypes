@@ -63,7 +63,7 @@ describe("getLightIsOn during 60 second loop", () => {
   describe("for blue light", () => {
     const { blue } = lights;
 
-    it("should return true when loopPosition is 0", () => {
+    it("should return true when loopPosition is at 0", () => {
       const bool = getLightIsOn(blue, 0, loopEnd);
       expect(bool).toBe(true);
     });
@@ -73,7 +73,7 @@ describe("getLightIsOn during 60 second loop", () => {
       expect(bool).toBe(true);
     });
 
-    it("should return false when loopPosition is 16", () => {
+    it("should return false when loopPosition is at 16", () => {
       const bool = getLightIsOn(blue, 16, loopEnd);
       expect(bool).toBe(false);
     });
@@ -83,17 +83,17 @@ describe("getLightIsOn during 60 second loop", () => {
       expect(bool).toBe(false);
     });
 
-    it("should return true when loopPosition is 26", () => {
+    it("should return true when loopPosition is at 26", () => {
       const bool = getLightIsOn(blue, 26, loopEnd);
       expect(bool).toBe(true);
     });
 
-    it("should return true when loopPosition is 26 and 59", () => {
+    it("should return true when loopPosition is between 26 and 59", () => {
       const bool = getLightIsOn(blue, 45, loopEnd);
       expect(bool).toBe(true);
     });
 
-    it("should return true when loopPosition is 59", () => {
+    it("should return true when loopPosition is at 59", () => {
       const bool = getLightIsOn(blue, 59, loopEnd);
       expect(bool).toBe(true);
     });
@@ -131,7 +131,7 @@ describe("getLightIsOn during 60 second loop", () => {
   describe("for red1 light", () => {
     const { red1 } = lights;
 
-    it("should return false when loopPosition is 59", () => {
+    it("should return false when loopPosition is at 59", () => {
       const bool = getLightIsOn(red1, loopEnd - 1, loopEnd);
       expect(bool).toBe(false);
     });
@@ -151,7 +151,7 @@ describe("getLightIsOn during 60 second loop", () => {
       expect(bool).toBe(true);
     });
 
-    it("should return false when loopPosition is after 8", () => {
+    it("should return false when loopPosition is after 7", () => {
       const bool = getLightIsOn(red1, 8, loopEnd);
       expect(bool).toBe(false);
     });
