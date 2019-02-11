@@ -1,7 +1,7 @@
 const getLightIsOn = (lightConfig, loopPosition, loopEnd) => {
   const { start: lightStart, duration: lightDuration } = lightConfig;
   const lightEnd = lightStart + lightDuration;
-  const lightStaysOnThroughLoopEnd = lightStart + lightDuration > loopEnd;
+  const lightStaysOnThroughLoopEnd = lightEnd > loopEnd;
 
   if (
     lightStaysOnThroughLoopEnd &&
