@@ -2,16 +2,15 @@ import { useState, useEffect } from "react";
 
 const useOneSecondLoop = ({ end }) => {
   const start = 0;
+  const reset = end - 1;
   const [position, setPosition] = useState(start);
-  const increment = 1;
 
   useEffect(() => {
     const loop = window.setInterval(() => {
-      if (position < end) {
-        setPosition(position + increment);
-      }
-      if (position === end) {
-        setPosition(start + increment);
+      if (position < reset) {
+        setPosition(position + 1);
+      } else if (position === reset) {
+        setPosition(start);
       }
     }, 1000);
 

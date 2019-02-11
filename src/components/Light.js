@@ -1,6 +1,9 @@
 import React from "react";
 import { RED, GREEN, BLUE } from "../constants";
 
+/*
+  utils
+*/
 const getR = color => {
   switch (color) {
     case RED:
@@ -26,13 +29,16 @@ const getB = color => {
   }
 };
 
-const getA = on => (on ? 1 : 0.1);
+const getA = isOn => (isOn ? 1 : 0.1);
 
-const Light = ({ color, on = false, bsClassName = "col-2" }) => {
+/*
+  component
+*/
+const Light = ({ color, isOn, bsClassName = "col-2" }) => {
   const r = getR(color);
   const g = getG(color);
   const b = getB(color);
-  const a = getA(on);
+  const a = getA(isOn);
 
   return (
     <div className={bsClassName}>
