@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/peako-light-prototype/static/js/runtime~main.2ccf08c6.js"
   },
   {
-    "revision": "f538baab656fdb9bf2c7",
-    "url": "/peako-light-prototype/static/js/main.f538baab.chunk.js"
+    "revision": "6444dc01d9e6998b70b1",
+    "url": "/peako-light-prototype/static/js/main.6444dc01.chunk.js"
   },
   {
     "revision": "f0c2bd464e9ba3b8e90c",
     "url": "/peako-light-prototype/static/js/1.f0c2bd46.chunk.js"
   },
   {
-    "revision": "f538baab656fdb9bf2c7",
+    "revision": "6444dc01d9e6998b70b1",
     "url": "/peako-light-prototype/static/css/main.2c6bd533.chunk.css"
   },
   {
-    "revision": "69b2360577ce1fc8f38557b7a01d401e",
+    "revision": "21956374a2803840c129e6e99339774e",
     "url": "/peako-light-prototype/index.html"
   }
 ];
