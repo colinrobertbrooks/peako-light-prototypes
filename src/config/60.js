@@ -1,4 +1,4 @@
-import { RED, GREEN, BLUE } from "../constants";
+import { BLUE, GREEN, RED } from "../constants";
 
 /*
   config for 60 second loop
@@ -22,8 +22,8 @@ export const lights = {
   blue: {
     id: "blue",
     color: BLUE,
-    start: 26,
-    duration: 50 // 60 - 26 + 15 + 1
+    start: 0,
+    duration: 60
   },
   green1: {
     id: "green1",
