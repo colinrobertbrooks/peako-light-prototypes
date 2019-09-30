@@ -7,8 +7,8 @@ int lightCount = 5;
 /*
  * configs
  */
-int start[5] = {32, 20, 26, 5, 0};
-int duration[5] = {8, 17, 50, 17, 8};
+int start[5] = {32, 20, 0, 5, 0};
+int duration[5] = {8, 17, 60, 17, 8};
 int loopEnd = 60;
 int delayMs = 1000;
 

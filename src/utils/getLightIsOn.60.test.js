@@ -1,5 +1,5 @@
+import { lights, loopEnd } from "../config/60";
 import getLightIsOn from "./getLightIsOn";
-import { loopEnd, lights } from "../config/60";
 
 describe("getLightIsOn during 60 second loop", () => {
   describe("for redTwo light", () => {
@@ -63,39 +63,10 @@ describe("getLightIsOn during 60 second loop", () => {
   describe("for blue light", () => {
     const { blue } = lights;
 
-    it("should return true when loopPosition is at 0", () => {
-      const bool = getLightIsOn(blue, 0, loopEnd);
-      expect(bool).toBe(true);
-    });
-
-    it("should return true when loopPosition is between 0 and 15", () => {
-      const bool = getLightIsOn(blue, 10, loopEnd);
-      expect(bool).toBe(true);
-    });
-
-    it("should return false when loopPosition is at 16", () => {
-      const bool = getLightIsOn(blue, 16, loopEnd);
-      expect(bool).toBe(false);
-    });
-
-    it("should return true when loopPosition is between 16 and 25", () => {
-      const bool = getLightIsOn(blue, 20, loopEnd);
-      expect(bool).toBe(false);
-    });
-
-    it("should return true when loopPosition is at 26", () => {
-      const bool = getLightIsOn(blue, 26, loopEnd);
-      expect(bool).toBe(true);
-    });
-
-    it("should return true when loopPosition is between 26 and 59", () => {
-      const bool = getLightIsOn(blue, 45, loopEnd);
-      expect(bool).toBe(true);
-    });
-
-    it("should return true when loopPosition is at 59", () => {
-      const bool = getLightIsOn(blue, 59, loopEnd);
-      expect(bool).toBe(true);
+    it("should return true for 0 through 59", () => {
+      [...Array(loopEnd).keys()].forEach(loopPosition =>
+        expect(getLightIsOn(blue, loopPosition, loopEnd)).toBe(true)
+      );
     });
   });
 
