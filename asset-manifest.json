@@ -1,13 +1,15 @@
 {
-  "main.css": "/peako-light-prototype/static/css/main.a61d07de.chunk.css",
-  "main.js": "/peako-light-prototype/static/js/main.97597c85.chunk.js",
-  "main.js.map": "/peako-light-prototype/static/js/main.97597c85.chunk.js.map",
-  "static/js/1.f0c2bd46.chunk.js": "/peako-light-prototype/static/js/1.f0c2bd46.chunk.js",
-  "static/js/1.f0c2bd46.chunk.js.map": "/peako-light-prototype/static/js/1.f0c2bd46.chunk.js.map",
+  "main.css": "/peako-light-prototype/static/css/main.a35525ee.chunk.css",
+  "main.js": "/peako-light-prototype/static/js/main.941c4d45.chunk.js",
+  "main.js.map": "/peako-light-prototype/static/js/main.941c4d45.chunk.js.map",
+  "static/css/1.28a3d655.chunk.css": "/peako-light-prototype/static/css/1.28a3d655.chunk.css",
+  "static/js/1.3a3aa6c4.chunk.js": "/peako-light-prototype/static/js/1.3a3aa6c4.chunk.js",
+  "static/js/1.3a3aa6c4.chunk.js.map": "/peako-light-prototype/static/js/1.3a3aa6c4.chunk.js.map",
   "runtime~main.js": "/peako-light-prototype/static/js/runtime~main.2ccf08c6.js",
   "runtime~main.js.map": "/peako-light-prototype/static/js/runtime~main.2ccf08c6.js.map",
-  "static/css/main.a61d07de.chunk.css.map": "/peako-light-prototype/static/css/main.a61d07de.chunk.css.map",
+  "static/css/main.a35525ee.chunk.css.map": "/peako-light-prototype/static/css/main.a35525ee.chunk.css.map",
+  "static/css/1.28a3d655.chunk.css.map": "/peako-light-prototype/static/css/1.28a3d655.chunk.css.map",
   "index.html": "/peako-light-prototype/index.html",
-  "precache-manifest.01a509d784d40b8f3517d517bcd7b152.js": "/peako-light-prototype/precache-manifest.01a509d784d40b8f3517d517bcd7b152.js",
+  "precache-manifest.b3b8376af940f79e52d1cdf8fc0d1e89.js": "/peako-light-prototype/precache-manifest.b3b8376af940f79e52d1cdf8fc0d1e89.js",
   "service-worker.js": "/peako-light-prototype/service-worker.js"
 }
