@@ -34,19 +34,17 @@ const getA = isOn => (isOn ? 1 : 0.1);
 /*
   component
 */
-const Light = ({ color, isOn, bsClassName = "col-2" }) => {
+const Light = ({ color, isOn }) => {
   const r = getR(color);
   const g = getG(color);
   const b = getB(color);
   const a = getA(isOn);
 
   return (
-    <div className={bsClassName}>
-      <div
-        className="light"
-        style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})` }}
-      />
-    </div>
+    <div
+      className="light"
+      style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})` }}
+    />
   );
 };
 

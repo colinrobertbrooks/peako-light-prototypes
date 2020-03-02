@@ -18,22 +18,32 @@ const RelaysPage = () => {
         <h1>Relays</h1>
         <hr />
       </Col>
-      <Col xs={1} />
-      <Light
-        color={redTwo.color}
-        isOn={getLightIsOn(redTwo, position, loopEnd)}
-      />
-      <Light
-        color={green2.color}
-        isOn={getLightIsOn(green2, position, loopEnd)}
-      />
-      <Light color={blue.color} isOn={getLightIsOn(blue, position, loopEnd)} />
-      <Light
-        color={green1.color}
-        isOn={getLightIsOn(green1, position, loopEnd)}
-      />
-      <Light color={red1.color} isOn={getLightIsOn(red1, position, loopEnd)} />
-      <Col xs={1} />
+      <Col sm={2} />
+      <Col sm={8}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Light
+            color={redTwo.color}
+            isOn={getLightIsOn(redTwo, position, loopEnd)}
+          />
+          <Light
+            color={green2.color}
+            isOn={getLightIsOn(green2, position, loopEnd)}
+          />
+          <Light
+            color={blue.color}
+            isOn={getLightIsOn(blue, position, loopEnd)}
+          />
+          <Light
+            color={green1.color}
+            isOn={getLightIsOn(green1, position, loopEnd)}
+          />
+          <Light
+            color={red1.color}
+            isOn={getLightIsOn(red1, position, loopEnd)}
+          />
+        </div>
+      </Col>
+      <Col sm={2} />
       <Col xs={12}>
         <hr />
       </Col>
