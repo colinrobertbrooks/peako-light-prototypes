@@ -1,5 +1,8 @@
 body {
   min-width: 320px;
+}
+
+main {
   margin-top: 25px;
 }
 

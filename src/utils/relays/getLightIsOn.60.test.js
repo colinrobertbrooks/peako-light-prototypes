@@ -1,4 +1,4 @@
-import { lights, loopEnd } from "../config/60";
+import { lights, loopEnd } from "../../config/60";
 import getLightIsOn from "./getLightIsOn";
 
 describe("getLightIsOn during 60 second loop", () => {
