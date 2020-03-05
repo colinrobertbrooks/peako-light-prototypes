@@ -11,7 +11,7 @@ import {
 
 const fadeDurationMs = 2000;
 
-export const tickMs = 200; // 2000 ms fade / 10 fade power positions
+export const tickMs = 200; // 2000 ms fade / 10 fade powers
 
 export const tickCount = 300; // 60000 ms / 200 ms tick
 
@@ -36,10 +36,11 @@ export const lights = {
     startFadeOut: 36 * ticksPerSec,
     fadeFor
   },
-  // Blue is on continually.
+  // Blue is on continually;
   [LIGHT_BLUE]: {
     id: LIGHT_BLUE,
-    color: BLUE
+    color: BLUE,
+    alwaysOn: true
   },
   // Green 1 comes on at 5, increases to full at 7, stays full 7-21, and fades off from 21-23;
   [LIGHT_GREEN_1]: {

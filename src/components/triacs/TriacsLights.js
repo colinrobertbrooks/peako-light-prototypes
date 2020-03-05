@@ -23,7 +23,11 @@ const TriacsLights = ({ tickMs, tickCount, lights, powerPositions }) => {
             color={green2.color}
             brightness={getPercentForPower(powerPositions.green2[position])}
           />
-          <Light title={blue.id} color={blue.color} brightness={1} />
+          <Light
+            title={blue.id}
+            color={blue.color}
+            brightness={getPercentForPower(powerPositions.blue[position])}
+          />
           <Light
             title={green1.id}
             color={green1.color}

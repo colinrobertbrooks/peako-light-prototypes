@@ -8,18 +8,21 @@ import {
   APP_NAME,
   LIGHT_RED_2,
   LIGHT_GREEN_2,
+  LIGHT_BLUE,
   LIGHT_GREEN_1,
   LIGHT_RED_1
 } from "../../constants";
 
-const { red2, green2, green1, red1 } = lights;
+const { red2, green2, blue, green1, red1 } = lights;
 const red2PowerPositions = getLightPowerPositions(red2, tickCount);
 const green2PowerPositions = getLightPowerPositions(green2, tickCount);
+const bluePowerPositions = getLightPowerPositions(blue, tickCount);
 const green1PowerPositions = getLightPowerPositions(green1, tickCount);
 const red1PowerPositions = getLightPowerPositions(red1, tickCount);
 const powerPositions = {
   [LIGHT_RED_2]: red2PowerPositions,
   [LIGHT_GREEN_2]: green2PowerPositions,
+  [LIGHT_BLUE]: bluePowerPositions,
   [LIGHT_GREEN_1]: green1PowerPositions,
   [LIGHT_RED_1]: red1PowerPositions
 };
