@@ -1,9 +1,9 @@
 import { LOW_POWER, HIGH_POWER, FADE_POWERS } from "../../config/triacs";
 
 const generatePowerPositionsForLight = (lightConfig, tickCount) => {
-  const { alwaysOn, startFadeIn, startFadeOut, fadeFor } = lightConfig;
+  const { isAlwaysOn, startFadeIn, startFadeOut, fadeFor } = lightConfig;
 
-  if (alwaysOn) {
+  if (isAlwaysOn) {
     return new Array(tickCount).fill(HIGH_POWER);
   }
 

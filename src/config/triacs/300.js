@@ -43,7 +43,7 @@ export const lights = {
   [LIGHT_BLUE]: {
     id: LIGHT_BLUE,
     color: BLUE,
-    alwaysOn: true
+    isAlwaysOn: true
   },
   // Green 1 fades in from *5*-7, stays high from 7-21, and fades out from *21*-23.
   // 42 @ low | 14 @ high | 4 in fade
