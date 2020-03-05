@@ -1,8 +1,4 @@
-import {
-  LOW_POWER_POSITION,
-  HIGH_POWER_POSITION,
-  FADE_POWER_POSITIONS
-} from "../../config/triacs";
+import { LOW_POWER, HIGH_POWER, FADE_POWERS } from "../../config/triacs";
 
 const getLightPowerPositions = (lightConfig, tickCount) => {
   const { startFadeIn, startFadeOut, fadeFor } = lightConfig;
@@ -19,14 +15,14 @@ const getLightPowerPositions = (lightConfig, tickCount) => {
 
     if (lightIsFadingIn) {
       const fadeInPowerIdx = position - startFadeIn - 1;
-      powerPositions.push(FADE_POWER_POSITIONS[fadeInPowerIdx]);
+      powerPositions.push(FADE_POWERS[fadeInPowerIdx]);
     } else if (lightIsFadingOut) {
       const fadeOutPowerIdx = position - startFadeOut;
-      powerPositions.push([...FADE_POWER_POSITIONS].reverse()[fadeOutPowerIdx]);
+      powerPositions.push([...FADE_POWERS].reverse()[fadeOutPowerIdx]);
     } else if (lightIsOn) {
-      powerPositions.push(HIGH_POWER_POSITION);
+      powerPositions.push(HIGH_POWER);
     } else {
-      powerPositions.push(LOW_POWER_POSITION);
+      powerPositions.push(LOW_POWER);
     }
 
     position++;
