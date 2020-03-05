@@ -41,9 +41,6 @@ const TriacsPage = () => {
         />
       </Col>
       <Col xs={12}>
-        <hr />
-      </Col>
-      <Col xs={12}>
         <TriacsChart tickCount={tickCount} powerPositions={powerPositions} />
       </Col>
     </Row>

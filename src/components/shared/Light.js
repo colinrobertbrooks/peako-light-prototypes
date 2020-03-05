@@ -1,5 +1,6 @@
 import React from "react";
-import { RED, GREEN, BLUE } from "../../constants";
+import styled from "styled-components";
+import { RED, GREEN, BLUE, MIN_LIGHT_BRIGHTNESS } from "../../constants";
 
 /*
   utils
@@ -29,7 +30,8 @@ const getB = color => {
   }
 };
 
-const getA = brightness => (brightness === 0 ? 0.07 : brightness);
+const getA = brightness =>
+  brightness === 0 ? MIN_LIGHT_BRIGHTNESS : brightness;
 
 /*
   component
@@ -40,13 +42,19 @@ const Light = ({ title, color, brightness }) => {
   const b = getB(color);
   const a = getA(brightness);
 
-  return (
-    <div
-      className="light"
-      title={title}
-      style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})` }}
-    />
-  );
+  return <Element title={title} r={r} g={g} b={b} a={a} />;
 };
+
+/*
+  styled
+*/
+const Element = styled.div`
+  background-color: ${({ r, g, b, a }) => `rgba(${r}, ${g}, ${b}, ${a})`};
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+`;
 
 export default Light;

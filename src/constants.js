@@ -19,3 +19,8 @@ export const RED = "red";
 export const GREEN = "green";
 
 export const BLUE = "blue";
+
+/*
+  brightness
+*/
+export const MIN_LIGHT_BRIGHTNESS = 0.05;

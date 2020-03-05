@@ -2,16 +2,17 @@
 // https://github.com/search?p=11&q=%23include+%3CRBDdimmer.h%3E&type=Code
 #include <RBDdimmer.h>
 
-#define lampOne  12
-#define lampTwo  13
-// lamp three is hard-wired
-#define lampFour  11
-#define lampFive  10
+// small white lights (left to right looking at them)
+#define lightOne  12
+#define lightTwo  13
+// lightThree is hard-wired
+#define lightFour  11
+#define lightFive  10
 
-dimmerLamp dimmerOne(lampOne);
-dimmerLamp dimmerTwo(lampTwo);
-dimmerLamp dimmerFour(lampFour);
-dimmerLamp dimmerFive(lampFive);
+dimmerlight dimmerOne(lightOne);
+dimmerlight dimmerTwo(lightTwo);
+dimmerlight dimmerFour(lightFour);
+dimmerlight dimmerFive(lightFive);
 
 int MIN_POWER = 65;
 int MAX_POWER = 70;
@@ -22,7 +23,7 @@ void transitionDelay() {
   delay(1000 / 6);
 }
 
-void lampOnDelay() {
+void lightOnDelay() {
   delay(1000);
 }
 
@@ -42,18 +43,18 @@ void setup() {
 
 void loop() {
   /*
-   * lamp 1
+   * light 1
    */
-  Serial.println("Brightening lamp 1");
+  Serial.println("Brightening light 1");
   for(power = MIN_POWER; power < MAX_POWER + 1; power++) {
     Serial.println(power);
     dimmerOne.setPower(power);
     transitionDelay();
   }
 
-  lampOnDelay();
+  lightOnDelay();
 
-  Serial.println("Dimming lamp 1");
+  Serial.println("Dimming light 1");
   for(power = MAX_POWER; power > MIN_POWER - 1; power--) {
     Serial.println(power);
     dimmerOne.setPower(power);
@@ -61,18 +62,18 @@ void loop() {
   }
 
   /*
-   * lamp 2
+   * light 2
    */
-  Serial.println("Brightening lamp 2");
+  Serial.println("Brightening light 2");
   for(power = MIN_POWER; power < MAX_POWER + 1; power++) {
     Serial.println(power);
     dimmerTwo.setPower(power);
     transitionDelay();
   }
 
-  lampOnDelay();
+  lightOnDelay();
 
-  Serial.println("Dimming lamp 2");
+  Serial.println("Dimming light 2");
   for(power = MAX_POWER; power > MIN_POWER - 1; power--) {
     Serial.println(power);
     dimmerTwo.setPower(power);
@@ -80,18 +81,18 @@ void loop() {
   }
 
   /*
-   * lamp 4
+   * light 4
    */
-  Serial.println("Brightening lamp 3");
+  Serial.println("Brightening light 3");
   for(power = MIN_POWER; power < MAX_POWER + 1; power++) {
     Serial.println(power);
     dimmerFour.setPower(power);
     transitionDelay();
   }
 
-  lampOnDelay();
+  lightOnDelay();
 
-  Serial.println("Dimming lamp 3");
+  Serial.println("Dimming light 3");
   for(power = MAX_POWER; power > MIN_POWER - 1; power--) {
     Serial.println(power);
     dimmerFour.setPower(power);
@@ -99,18 +100,18 @@ void loop() {
   }
 
   /*
-   * lamp 5
+   * light 5
    */
-  Serial.println("Brightening lamp 4");
+  Serial.println("Brightening light 4");
   for(power = MIN_POWER; power < MAX_POWER + 1; power++) {
     Serial.println(power);
     dimmerFive.setPower(power);
     transitionDelay();
   }
 
-  lampOnDelay();
+  lightOnDelay();
 
-  Serial.println("Dimming lamp 4");
+  Serial.println("Dimming light 4");
   for(power = MAX_POWER; power > MIN_POWER - 1; power--) {
     Serial.println(power);
     dimmerFive.setPower(power);

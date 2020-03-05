@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import Light from "../shared/Light";
+import { LightsWrapper, Light } from "../shared";
 import { useLoop } from "../../hooks";
 import { getPercentForPower } from "../../utils/triacs";
 
@@ -12,7 +12,7 @@ const TriacsLights = ({ tickMs, tickCount, lights, powerPositions }) => {
     <Row>
       <Col sm={2} />
       <Col sm={8}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <LightsWrapper>
           <Light
             title={red2.id}
             color={red2.color}
@@ -34,7 +34,7 @@ const TriacsLights = ({ tickMs, tickCount, lights, powerPositions }) => {
             color={red1.color}
             brightness={getPercentForPower(powerPositions.red1[position])}
           />
-        </div>
+        </LightsWrapper>
       </Col>
       <Col sm={2} />
       <Col xs={12}>

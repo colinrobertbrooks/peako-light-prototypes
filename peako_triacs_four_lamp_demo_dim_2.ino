@@ -2,7 +2,7 @@
 // https://github.com/search?p=11&q=%23include+%3CRBDdimmer.h%3E&type=Code
 #include <RBDdimmer.h>
 
-// lights (left to right looking at them)
+// large colored lights (left to right looking at them)
 #define redTwo 12
 #define greenTwo 13
 // blue is hard-wired

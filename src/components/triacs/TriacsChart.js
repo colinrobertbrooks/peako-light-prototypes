@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip
 } from "recharts";
+import styled from "styled-components";
 import { useResizeObserver } from "../../hooks";
 import { getPercentForPower } from "../../utils/triacs";
 import {
@@ -18,6 +19,9 @@ import {
   GREEN
 } from "../../constants";
 
+/*
+  utils
+*/
 const generateChartData = ({ tickCount, powerPositions }) => {
   const chartData = [];
   let position = 0;
@@ -35,30 +39,70 @@ const generateChartData = ({ tickCount, powerPositions }) => {
   return chartData;
 };
 
+const formatPercent = num => `${parseFloat(num * 100).toFixed(1)}%`;
+
+/*
+  component
+*/
+// https://github.com/recharts/recharts/issues/1664#issuecomment-570227310
+const XAxisTick = ({ x, y, payload }) => (
+  <g transform={`translate(${x},${y})`}>
+    <text dy={16} textAnchor="middle" fill="#666">
+      {payload.value}
+    </text>
+  </g>
+);
+
 // http://recharts.org/en-US/examples/SimpleLineChart
 const TriacsChart = ({ tickCount, powerPositions }) => {
-  const chartRrf = useRef(null);
-  const { width: chartWidth } = useResizeObserver({ ref: chartRrf });
+  const chartWrapperRef = useRef(null);
+  const { width: chartWidth } = useResizeObserver({ ref: chartWrapperRef });
   const commonLineProps = { type: "monotone", dot: false };
 
   return (
-    <div ref={chartRrf} style={{ height: "200px" }}>
+    <ChartWrapper ref={chartWrapperRef}>
       <LineChart
         width={chartWidth}
         height={300}
+        margin={{
+          top: 20,
+          right: 20,
+          left: 0,
+          bottom: 40
+        }}
         data={generateChartData({ tickCount, powerPositions })}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="position" />
-        <YAxis />
-        <Tooltip />
+        <XAxis
+          dataKey="position"
+          ticks={[
+            // 10 second intervals
+            0,
+            5 * 10 - 1,
+            5 * 20 - 1,
+            5 * 30 - 1,
+            5 * 40 - 1,
+            5 * 50 - 1,
+            5 * 60 - 1
+          ]}
+          tick={<XAxisTick />}
+        />
+        <YAxis tickCount={6} tickFormatter={formatPercent} />
+        <Tooltip formatter={formatPercent} />
         <Line dataKey={LIGHT_RED_2} stroke={RED} {...commonLineProps} />
         <Line dataKey={LIGHT_GREEN_2} stroke={GREEN} {...commonLineProps} />
         <Line dataKey={LIGHT_GREEN_1} stroke={GREEN} {...commonLineProps} />
         <Line dataKey={LIGHT_RED_1} stroke={RED} {...commonLineProps} />
       </LineChart>
-    </div>
+    </ChartWrapper>
   );
 };
+
+/*
+ styled
+*/
+const ChartWrapper = styled.div`
+  height: 200px;
+`;
 
 export default TriacsChart;

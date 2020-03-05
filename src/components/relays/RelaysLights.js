@@ -4,8 +4,14 @@ import { LightsWrapper, Light } from "../shared";
 import { useLoop } from "../../hooks";
 import { getLightIsOn } from "../../utils/relays";
 
+/*
+  utils
+*/
 const getBrightness = isOn => (isOn ? 1 : 0);
 
+/*
+  component
+*/
 const RelaysLights = ({ tickMs, tickCount, lights }) => {
   const { position } = useLoop({ tickMs, tickCount });
   const { red2, green2, blue, green1, red1 } = lights;
