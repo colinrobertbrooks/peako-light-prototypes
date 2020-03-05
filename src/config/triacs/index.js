@@ -1,3 +1,4 @@
+// https://github.com/RobotDynOfficial/RBDDimmer
 export const LOW_POWER = 20;
 
 export const HIGH_POWER = 37;

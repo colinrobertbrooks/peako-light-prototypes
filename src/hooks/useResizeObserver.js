@@ -1,4 +1,7 @@
 import { useEffect, useState, useRef, useMemo } from "react";
+import { ResizeObserver as Polyfill } from "@juggle/resize-observer";
+
+const ResizeObserver = window.ResizeObserver || Polyfill;
 
 // https://github.com/ZeeCoder/use-resize-observer/blob/master/src/index.js
 const useResizeObserver = ({ ref, onResize } = {}) => {

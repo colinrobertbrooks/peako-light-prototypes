@@ -1,5 +1,5 @@
 /*
-  lamps (left to right looking at them)
+  lights (left to right looking at them)
 */
 export const LIGHT_RED_2 = "red2";
 
