@@ -1,4 +1,9 @@
 /*
+  app
+*/
+export const APP_NAME = "Peako Light Prototypes";
+
+/*
   lights (left to right looking at them)
 */
 export const LIGHT_RED_2 = "red2";

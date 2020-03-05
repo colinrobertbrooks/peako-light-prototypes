@@ -1,4 +1,4 @@
-// power positions determined with `rbddimmer_serial_monitor_dim.ino`
+// light power positions determined with `rbddimmer_serial_monitor_dim.ino`
 export const LOW_POWER = 20;
 
 export const HIGH_POWER = 37;

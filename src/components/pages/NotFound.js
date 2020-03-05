@@ -1,9 +1,10 @@
 import React from "react";
 import NavButton from "../navigation/NavButton";
 import { useDocumentTitle } from "../../hooks";
+import { APP_NAME } from "../../constants";
 
 const NotFoundPage = () => {
-  useDocumentTitle("Page Not Found | Peako Light Prototype");
+  useDocumentTitle(`Page Not Found | ${APP_NAME}`);
 
   return (
     <>

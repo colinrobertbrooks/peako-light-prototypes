@@ -8,6 +8,7 @@ import {
   NavItem
 } from "reactstrap";
 import NavLink from "./NavLink";
+import { APP_NAME } from "../../constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   return (
     <ReactstrapNavbar color="light" light expand="md">
-      <NavbarBrand>Peako Light Prototypes</NavbarBrand>
+      <NavbarBrand>{APP_NAME}</NavbarBrand>
       <NavbarToggler onClick={toggleIsOpen} />
       <Collapse isOpen={isOpen} navbar>
         <Nav navbar className="ml-auto">

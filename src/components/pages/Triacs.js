@@ -5,6 +5,7 @@ import { useDocumentTitle } from "../../hooks";
 import { getLightPowerPositions } from "../../utils/triacs";
 import { tickMs, tickCount, lights } from "../../config/triacs";
 import {
+  APP_NAME,
   LIGHT_RED_2,
   LIGHT_GREEN_2,
   LIGHT_GREEN_1,
@@ -24,7 +25,7 @@ const powerPositions = {
 };
 
 const TriacsPage = () => {
-  useDocumentTitle("Triacs | Peako Light Prototype");
+  useDocumentTitle(`Triacs | ${APP_NAME}`);
 
   return (
     <Row>

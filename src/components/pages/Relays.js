@@ -3,9 +3,10 @@ import { Row, Col } from "reactstrap";
 import { RelaysLights } from "../relays";
 import { useDocumentTitle } from "../../hooks";
 import { tickMs, tickCount, lights } from "../../config/relays";
+import { APP_NAME } from "../../constants";
 
 const RelaysPage = () => {
-  useDocumentTitle("Relays | Peako Light Prototype");
+  useDocumentTitle(`Relays | ${APP_NAME}`);
 
   return (
     <Row>
