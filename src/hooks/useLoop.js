@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-const useOneSecondLoop = ({ end }) => {
+const useLoop = ({ tickMs, tickCount }) => {
   const start = 0;
-  const reset = end - 1;
+  const reset = tickCount - 1;
   const [position, setPosition] = useState(start);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const useOneSecondLoop = ({ end }) => {
       } else if (position === reset) {
         setPosition(start);
       }
-    }, 1000);
+    }, tickMs);
 
     return () => {
       window.clearInterval(loop);
@@ -22,4 +22,4 @@ const useOneSecondLoop = ({ end }) => {
   return { position };
 };
 
-export default useOneSecondLoop;
+export default useLoop;

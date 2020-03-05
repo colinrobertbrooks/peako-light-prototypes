@@ -1,6 +1,6 @@
 import React from "react";
 import NavButton from "../navigation/NavButton";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import { useDocumentTitle } from "../../hooks";
 
 const NotFoundPage = () => {
   useDocumentTitle("Page Not Found | Peako Light Prototype");

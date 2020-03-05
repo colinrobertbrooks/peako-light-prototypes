@@ -1,5 +1,5 @@
 import React from "react";
-import { RED, GREEN, BLUE } from "../constants";
+import { RED, GREEN, BLUE } from "../../constants";
 
 /*
   utils
@@ -29,20 +29,21 @@ const getB = color => {
   }
 };
 
-const getA = isOn => (isOn ? 1 : 0.1);
+const getA = brightness => (brightness === 0 ? 0.07 : brightness);
 
 /*
   component
 */
-const Light = ({ color, isOn }) => {
+const Light = ({ title, color, brightness }) => {
   const r = getR(color);
   const g = getG(color);
   const b = getB(color);
-  const a = getA(isOn);
+  const a = getA(brightness);
 
   return (
     <div
       className="light"
+      title={title}
       style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})` }}
     />
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Jumbotron } from "reactstrap";
 import NavButton from "../navigation/NavButton";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import { useDocumentTitle } from "../../hooks";
 
 const IndexPage = () => {
   useDocumentTitle("Peako Light Prototypes");
