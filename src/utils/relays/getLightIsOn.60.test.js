@@ -1,7 +1,7 @@
 import { lights, tickCount } from "../../config/relays/60";
 import getLightIsOn from "./getLightIsOn";
 
-describe("getLightIsOn during 60 second loop", () => {
+describe("getLightIsOn for a tickCount of 60", () => {
   describe("for red2 light", () => {
     const { red2 } = lights;
 

@@ -14,7 +14,7 @@ const generatePowerPositionsForLight = (lightConfig, tickCount) => {
     const lightIsFadingIn =
       position > startFadeIn && position <= startFadeIn + fadeFor;
     const lightIsFadingOut =
-      position >= startFadeOut && position < startFadeOut + fadeFor;
+      position > startFadeOut && position <= startFadeOut + fadeFor;
     const lightIsOn =
       position > startFadeIn + fadeFor && position <= startFadeOut;
 
@@ -22,7 +22,7 @@ const generatePowerPositionsForLight = (lightConfig, tickCount) => {
       const fadeInPowerIdx = position - startFadeIn - 1;
       powerPositions.push(FADE_POWERS[fadeInPowerIdx]);
     } else if (lightIsFadingOut) {
-      const fadeOutPowerIdx = position - startFadeOut;
+      const fadeOutPowerIdx = position - startFadeOut - 1;
       powerPositions.push([...FADE_POWERS].reverse()[fadeOutPowerIdx]);
     } else if (lightIsOn) {
       powerPositions.push(HIGH_POWER);
