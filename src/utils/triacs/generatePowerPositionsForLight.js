@@ -1,6 +1,6 @@
 import { LOW_POWER, HIGH_POWER, FADE_POWERS } from "../../config/triacs";
 
-const getLightPowerPositions = (lightConfig, tickCount) => {
+const generatePowerPositionsForLight = (lightConfig, tickCount) => {
   const { alwaysOn, startFadeIn, startFadeOut, fadeFor } = lightConfig;
 
   if (alwaysOn) {
@@ -36,4 +36,4 @@ const getLightPowerPositions = (lightConfig, tickCount) => {
   return powerPositions;
 };
 
-export default getLightPowerPositions;
+export default generatePowerPositionsForLight;

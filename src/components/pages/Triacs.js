@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 import { TriacsLights, TriacsChart } from "../triacs";
 import { useDocumentTitle } from "../../hooks";
-import { getLightPowerPositions } from "../../utils/triacs";
+import { generatePowerPositionsForLight } from "../../utils/triacs";
 import { tickMs, tickCount, lights } from "../../config/triacs";
 import {
   APP_NAME,
@@ -14,11 +14,11 @@ import {
 } from "../../constants";
 
 const { red2, green2, blue, green1, red1 } = lights;
-const red2PowerPositions = getLightPowerPositions(red2, tickCount);
-const green2PowerPositions = getLightPowerPositions(green2, tickCount);
-const bluePowerPositions = getLightPowerPositions(blue, tickCount);
-const green1PowerPositions = getLightPowerPositions(green1, tickCount);
-const red1PowerPositions = getLightPowerPositions(red1, tickCount);
+const red2PowerPositions = generatePowerPositionsForLight(red2, tickCount);
+const green2PowerPositions = generatePowerPositionsForLight(green2, tickCount);
+const bluePowerPositions = generatePowerPositionsForLight(blue, tickCount);
+const green1PowerPositions = generatePowerPositionsForLight(green1, tickCount);
+const red1PowerPositions = generatePowerPositionsForLight(red1, tickCount);
 const powerPositions = {
   [LIGHT_RED_2]: red2PowerPositions,
   [LIGHT_GREEN_2]: green2PowerPositions,

@@ -9,7 +9,7 @@ import {
 } from "recharts";
 import styled from "styled-components";
 import { useResizeObserver } from "../../hooks";
-import { getPercentForPower } from "../../utils/triacs";
+import { getBrightnessForPower } from "../../utils/triacs";
 import {
   LIGHT_RED_2,
   LIGHT_GREEN_2,
@@ -22,17 +22,17 @@ import {
 /*
   utils
 */
-const generateChartData = ({ tickCount, powerPositions }) => {
+const generateChartData = (tickCount, powerPositions) => {
   const chartData = [];
   let position = 0;
 
   while (position < tickCount) {
     chartData.push({
       position,
-      [LIGHT_RED_2]: getPercentForPower(powerPositions.red2[position]),
-      [LIGHT_GREEN_2]: getPercentForPower(powerPositions.green2[position]),
-      [LIGHT_GREEN_1]: getPercentForPower(powerPositions.green1[position]),
-      [LIGHT_RED_1]: getPercentForPower(powerPositions.red1[position])
+      [LIGHT_RED_2]: getBrightnessForPower(powerPositions.red2[position]),
+      [LIGHT_GREEN_2]: getBrightnessForPower(powerPositions.green2[position]),
+      [LIGHT_GREEN_1]: getBrightnessForPower(powerPositions.green1[position]),
+      [LIGHT_RED_1]: getBrightnessForPower(powerPositions.red1[position])
     });
     position++;
   }
@@ -70,7 +70,7 @@ const TriacsChart = ({ tickCount, powerPositions }) => {
           left: 0,
           bottom: 40
         }}
-        data={generateChartData({ tickCount, powerPositions })}
+        data={generateChartData(tickCount, powerPositions)}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis

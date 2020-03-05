@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 import { LightsWrapper, Light } from "../shared";
 import { useLoop } from "../../hooks";
-import { getPercentForPower } from "../../utils/triacs";
+import { getBrightnessForPower } from "../../utils/triacs";
 
 const TriacsLights = ({ tickMs, tickCount, lights, powerPositions }) => {
   const { position } = useLoop({ tickMs, tickCount });
@@ -16,27 +16,27 @@ const TriacsLights = ({ tickMs, tickCount, lights, powerPositions }) => {
           <Light
             title={red2.id}
             color={red2.color}
-            brightness={getPercentForPower(powerPositions.red2[position])}
+            brightness={getBrightnessForPower(powerPositions.red2[position])}
           />
           <Light
             title={green2.id}
             color={green2.color}
-            brightness={getPercentForPower(powerPositions.green2[position])}
+            brightness={getBrightnessForPower(powerPositions.green2[position])}
           />
           <Light
             title={blue.id}
             color={blue.color}
-            brightness={getPercentForPower(powerPositions.blue[position])}
+            brightness={getBrightnessForPower(powerPositions.blue[position])}
           />
           <Light
             title={green1.id}
             color={green1.color}
-            brightness={getPercentForPower(powerPositions.green1[position])}
+            brightness={getBrightnessForPower(powerPositions.green1[position])}
           />
           <Light
             title={red1.id}
             color={red1.color}
-            brightness={getPercentForPower(powerPositions.red1[position])}
+            brightness={getBrightnessForPower(powerPositions.red1[position])}
           />
         </LightsWrapper>
       </Col>

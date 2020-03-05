@@ -1,2 +1,2 @@
-export { default as getLightPowerPositions } from "./getLightPowerPositions";
-export { default as getPercentForPower } from "./getPercentForPower";
+export { default as generatePowerPositionsForLight } from "./generatePowerPositionsForLight";
+export { default as getBrightnessForPower } from "./getBrightnessForPower";
