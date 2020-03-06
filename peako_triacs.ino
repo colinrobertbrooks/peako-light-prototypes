@@ -22,10 +22,10 @@ int lightCount = 4;
 /*
  * configs
  */
-int lowPower = 20;
-int highPower = 37;
+int lowPower = 21;
+int highPower = 50;
 int fadePowersAsc[10] = {26, 28, 29, 30, 31, 32, 33, 34, 35, 36};
-int fadePowersDesc[10] = {36,35,34,33,32,31,30,29,28,26};
+int fadePowersDesc[10] = {36, 35, 34, 33, 32, 31, 30, 29, 28, 26};
 int fadeIns[4] = {160, 100, 25, 0};
 int fadeOuts[4] = {205, 180, 105, 45};
 int fadeFor = 10;
