@@ -19,6 +19,7 @@ import {
   GREEN
 } from "../../constants";
 
+const CHART_HEIGHT = 300;
 /*
   utils
 */
@@ -63,7 +64,7 @@ const TriacsChart = ({ tickCount, powerPositions }) => {
     <ChartWrapper ref={chartWrapperRef}>
       <LineChart
         width={chartWidth}
-        height={300}
+        height={CHART_HEIGHT}
         margin={{
           top: 20,
           right: 20,
@@ -102,7 +103,7 @@ const TriacsChart = ({ tickCount, powerPositions }) => {
  styled
 */
 const ChartWrapper = styled.div`
-  height: 200px;
+  height: ${CHART_HEIGHT}px;
 `;
 
 export default TriacsChart;
