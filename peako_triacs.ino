@@ -46,7 +46,7 @@ int setNextLoopIdx() {
 
   if(loopIdx < reset) {
     loopIdx = loopIdx + 1;
-  } else if(loopIdx == reset) {
+  } else {
     loopIdx = start;
   }
 }
@@ -83,24 +83,26 @@ void setup() {
 }
 
 void loop() {
+  // Serial.println(loopIdx);
   for(int lightIdx = 0; lightIdx < lightCount; lightIdx++){
+    int power = getLightPower(lightIdx);
+
     switch (lightIdx) {
       case 0:
-        dimmerRedTwo.setPower(getLightPower(lightIdx));
+        dimmerRedTwo.setPower(power);
         break;
       case 1:
-        dimmerGreenTwo.setPower(getLightPower(lightIdx));
+        dimmerGreenTwo.setPower(power);
         break;
       case 2:
-        dimmerGreenOne.setPower(getLightPower(lightIdx));
+        dimmerGreenOne.setPower(power);
         break;
       case 3:
-        dimmerRedOne.setPower(getLightPower(lightIdx));
+        dimmerRedOne.setPower(power);
         break;
     }
   }
 
-  delay(delayMs);
-  // Serial.println(loopIdx);
   setNextLoopIdx();
+  delay(delayMs);
 }
