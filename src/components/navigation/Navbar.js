@@ -15,16 +15,20 @@ const Navbar = () => {
   const toggleIsOpen = () => setIsOpen(!isOpen);
 
   return (
-    <ReactstrapNavbar color="light" light expand="md">
+    <ReactstrapNavbar color="light" light expand="md" fixed="top">
       <NavbarBrand>{APP_NAME}</NavbarBrand>
       <NavbarToggler onClick={toggleIsOpen} />
       <Collapse isOpen={isOpen} navbar>
         <Nav navbar className="ml-auto">
           <NavItem>
-            <NavLink to="/relays">Relays</NavLink>
+            <NavLink to="/relays" onClick={toggleIsOpen}>
+              Relays
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/triacs">Triacs</NavLink>
+            <NavLink to="/triacs" onClick={toggleIsOpen}>
+              Triacs
+            </NavLink>
           </NavItem>
         </Nav>
       </Collapse>
