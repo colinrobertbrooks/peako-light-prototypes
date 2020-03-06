@@ -24,7 +24,7 @@ void setup() {
   dimmerRedOne.begin(NORMAL_MODE, ON);
 
   Serial.println("Dimmer Program is starting...");
-  Serial.println("Set value");
+  Serial.println("Set light values");
 }
 
 void printSpace(int val) {
@@ -47,7 +47,7 @@ void loop() {
   dimmerRedOne.setPower(outVal);
 
   if (preVal != outVal){
-    Serial.print("lampValue -> ");
+    Serial.print("light values -> ");
     printSpace(dimmerRedTwo.getPower());
     Serial.print(dimmerRedTwo.getPower());
     Serial.println("%");
