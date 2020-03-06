@@ -10,7 +10,7 @@ const Footer = () => {
       return (
         <Element>
           <a
-            href="https://github.com/colinrcummings/peako-light-prototypes/blob/master/peako_relays.ino"
+            href="https://raw.githubusercontent.com/colinrcummings/peako-light-prototypes/master/peako_relays.ino"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -23,7 +23,7 @@ const Footer = () => {
       return (
         <Element>
           <a
-            href="https://github.com/colinrcummings/peako-light-prototypes/blob/master/peako_triacs.ino"
+            href="https://raw.githubusercontent.com/colinrcummings/peako-light-prototypes/master/peako_triacs.ino"
             target="_blank"
             rel="noopener noreferrer"
           >

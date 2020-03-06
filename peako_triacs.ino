@@ -41,13 +41,10 @@ int loopIdx;
  * utils
  */
 int setNextLoopIdx() {
-  int start = 0;
-  int reset = loopEnd - 1;
-
-  if(loopIdx < reset) {
+  if(loopIdx < loopEnd - 1) {
     loopIdx = loopIdx + 1;
   } else {
-    loopIdx = start;
+    loopIdx = 0;
   }
 }
 

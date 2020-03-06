@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
 
-const useLoop = ({ tickMs, tickCount }) => {
-  const start = 0;
-  const reset = tickCount - 1;
-  const [position, setPosition] = useState(start);
+const useLoop = ({ tickMs, tickCount, initialTick = 0 }) => {
+  const [position, setPosition] = useState(initialTick);
 
   useEffect(() => {
     const loop = window.setInterval(() => {
-      if (position < reset) {
+      if (position < tickCount - 1) {
         setPosition(position + 1);
-      } else if (position === reset) {
-        setPosition(start);
+      } else {
+        setPosition(initialTick);
       }
     }, tickMs);
 
