@@ -5,6 +5,7 @@ import IndexPage from "./pages/Index";
 import RelaysPage from "./pages/Relays";
 import TriacsPage from "./pages/Triacs";
 import NotFoundPage from "./pages/NotFound";
+import Footer from "./Footer";
 
 const App = () => (
   <>
@@ -17,6 +18,7 @@ const App = () => (
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>
+    <Footer />
   </>
 );
 
