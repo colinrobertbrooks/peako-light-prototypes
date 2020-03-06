@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/peako-light-prototypes/precache-manifest.31c23140a1d658fba4af65b2c7f63a31.js"
+  "/peako-light-prototypes/precache-manifest.ab0236ff3568128d1fae06b8e56a9b7e.js"
 );
 
 workbox.clientsClaim();
