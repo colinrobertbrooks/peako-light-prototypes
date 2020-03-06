@@ -1,4 +1,4 @@
-# Peako Light Prototype
+# Peako Light Prototypes
 
 ## Development
 
@@ -18,6 +18,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## References
 
-[Use an Arduino and Relays to Control AC Lights and Appliances](https://makezine.com/projects/arduino-relays-high-voltage/)
+### Arduino
+
+[Arduino IDE](https://www.arduino.cc/en/main/software)
 
 [Learning C for Arduino](https://mrwilde.com/wp-content/uploads/2018/03/Learning-C-for-Arduino.pdf)
+
+### Relays (I/O)
+
+[Use an Arduino and Relays to Control AC Lights and Appliances](https://makezine.com/projects/arduino-relays-high-voltage/)
+
+### Triacs (Fade)
+
+[Installing Additional Arduino Libraries](https://www.arduino.cc/en/guide/libraries)
+
+[RBDDimmer Library](https://github.com/RobotDynOfficial/RBDDimmer)
+
+[RBDDimmer Usage Example](https://github.com/austincastro/hydroponics/blob/074846c5ee88568d48e403ae625cd39d4aa94d56/Thesis/Unit%20Testing/Unit_9_Light_Dimmer/Unit_9_Light_Dimmer.ino)

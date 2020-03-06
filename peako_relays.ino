@@ -26,10 +26,9 @@ int setNextLoopIdx() {
 
   if(loopIdx < reset) {
     loopIdx = loopIdx + 1;
-  } else if(loopIdx == reset) {
+  } else {
     loopIdx = start;
   }
-  // Serial.println(loopIdx);
 }
 
 bool getLightState(int lightIdx) {
@@ -61,9 +60,11 @@ void setup() {
 }
 
 void loop() {
+  // Serial.println(loopIdx);
   for(int lightIdx = 0; lightIdx < lightCount; lightIdx++){
     digitalWrite(lights[lightIdx], getLightState(lightIdx));
   }
-  delay(delayMs);
+
   setNextLoopIdx();
+  delay(delayMs);
 }

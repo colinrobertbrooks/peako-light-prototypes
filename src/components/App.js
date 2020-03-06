@@ -1,52 +1,23 @@
 import React from "react";
-import Light from "./Light";
-import useOneSecondLoop from "../hooks/useOneSecondLoop";
-import getLightIsOn from "../utils/getLightIsOn";
-import { loopEnd, lights } from "../config";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./navigation/Navbar";
+import IndexPage from "./pages/Index";
+import RelaysPage from "./pages/Relays";
+import TriacsPage from "./pages/Triacs";
+import NotFoundPage from "./pages/NotFound";
 
-const { redTwo, green2, blue, green1, red1 } = lights;
+const App = () => (
+  <>
+    <Navbar />
+    <main className="container text-center">
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="relays" element={<RelaysPage />} />
+        <Route path="triacs" element={<TriacsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </main>
+  </>
+);
 
-const App = () => {
-  const { position } = useOneSecondLoop({ end: loopEnd });
-
-  return (
-    <div className="container text-center">
-      <div className="row">
-        <div className="col-12">
-          <hr />
-        </div>
-        <div className="col-1" />
-        <Light
-          color={redTwo.color}
-          isOn={getLightIsOn(redTwo, position, loopEnd)}
-        />
-        <Light
-          color={green2.color}
-          isOn={getLightIsOn(green2, position, loopEnd)}
-        />
-        <Light
-          color={blue.color}
-          isOn={getLightIsOn(blue, position, loopEnd)}
-        />
-        <Light
-          color={green1.color}
-          isOn={getLightIsOn(green1, position, loopEnd)}
-        />
-        <Light
-          color={red1.color}
-          isOn={getLightIsOn(red1, position, loopEnd)}
-        />
-        <div className="col-1" />
-        <div className="col-12">
-          <hr />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <p className="small text-muted">Loop: {position}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
 export default App;
