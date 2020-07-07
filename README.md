@@ -1,5 +1,7 @@
 # Peako Light Prototypes
 
+Logic prototypes for mjpeakeART's [Time Pieces](http://mjpeake.com/time-pieces).
+
 ## Development
 
 `$ yarn start`
